@@ -20,5 +20,8 @@
         android:label="NoteFragment"
         tools:layout="@layout/fragment_note">
 
+        <argument
+            android:name="note"
+            app:argType="com.sultan.noteapp.data.Note" />
     </fragment>
 </navigation>
