@@ -22,6 +22,8 @@
 
         <argument
             android:name="note"
-            app:argType="com.sultan.noteapp.data.Note" />
+            app:argType="com.sultan.noteapp.data.Note"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 </navigation>
