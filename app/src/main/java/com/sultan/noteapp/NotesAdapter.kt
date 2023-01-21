@@ -8,13 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sultan.noteapp.data.Note
 import com.sultan.noteapp.databinding.NotesItemBinding
 
-class NotesAdapter : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
-    inner class NotesViewHolder(val binding: NotesItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(note: Note) {
-            binding.tvNoteTitle.text = note.noteTitle
-        }
-    }
+class NotesAdapter : RecyclerView.Adapter<NotesViewHolder>() {
+
 
     private val diffCallBack = object : DiffUtil.ItemCallback<Note>() {
         override fun areItemsTheSame(oldItem: Note, newItem: Note): Boolean {

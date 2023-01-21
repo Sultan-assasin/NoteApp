@@ -35,6 +35,7 @@ class NotesListFragment : Fragment(R.layout.fragment_notes_list) {
         super.onViewCreated(view, savedInstanceState)
 
         setupRecyclerView()
+
         lifecycleScope.launchWhenCreated {
             viewModel.notes.collect { notesList ->
                 notesAdapter.differ.submitList(notesList)
